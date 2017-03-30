@@ -10,7 +10,7 @@ import UIKit
 
 class CircleView: UIView {
     
-    var color:UIColor = UIColor.blueColor() {
+    var color:UIColor = UIColor.blue {
         didSet {
             // Color was set, so tell the system a redraw is needed.
             setNeedsDisplay()
@@ -27,11 +27,11 @@ class CircleView: UIView {
     }
     
     convenience init() {
-        self.init(frame: CGRectZero)
+        self.init(frame: CGRect.zero)
     }
 
-    override func drawRect(rect: CGRect) {
-        let path = UIBezierPath(ovalInRect: rect)
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath(ovalIn: rect)
         color.setFill()
         path.fill()
     }

@@ -28,18 +28,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var bLabel: UILabel!
     
     // Update Label Values
-    @IBAction func rChanged(sender: AnyObject) {
+    @IBAction func rChanged(_ sender: AnyObject) {
         rLabel.text = Int(rStep.value).description
     }
-    @IBAction func gChanged(sender: AnyObject) {
+    @IBAction func gChanged(_ sender: AnyObject) {
         gLabel.text = Int(gStep.value).description
     }
-    @IBAction func bChanged(sender: AnyObject) {
+    @IBAction func bChanged(_ sender: AnyObject) {
         bLabel.text = Int(bStep.value).description
     }
     
     // Button pressed to set CircleView color
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         setColorFromSteppers()
     }
     
